@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxare</title>
+  <link rel="stylesheet" href="styles.css">
+  
+
+
+  <style>
+    /* Global Styles */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    body {
+      background-color: #f6e7f7; /* Pearly purple */
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #4d3066; /* Plum */
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000; /* Black */
+      text-decoration: none;
+    }
+
+    .navigation {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navigation li {
+      margin-right: 20px;
+    }
+
+    .navigation li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Banner Styles */
+    .banner {
+      background-color: #7c4d85; /* Plum */
+      padding: 60px;
+      text-align: center;
+      color: #000; /* Black */
+    }
+
+    .banner h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #4d3066; /* Plum */
+}
+
+    .banner p {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    /* Main Content Styles */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-heading {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #4d3066; /* Plum */
+    }
+
+    .section-content p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .section-content ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .login-buttons {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4d3066; /* Plum */
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #7c4d85; /* Plum */
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #4d3066; /* Plum */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      color: black;
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#" class="logo">Taxare</a>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Messages</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="container">
+        <h1>Work with the largest network of independent professionals</h1>
+        <p>Find talent for any Taxation or join the community as a CA</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="section-heading">How it Works</h2>
+      <div class="section-content">
+        <p>Are you tired of the time-consuming process of finding a reliable and qualified chartered accountant to assist you with filing your taxes? Look no further! We are excited to present Taxare, an innovative web application that aims to streamline the process of connecting tax claimers with chartered accountants.</p>
+
+        <ul>
+          <li>Post a requirement for free and find the right CA in minutes</li>
+          <li>Browse profiles, reviews, and bids</li>
+          <li>Collaborate easily using Taxare's online workspace</li>
+          <li>Pay CA's securely through Taxare's platform</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="section-heading">Get Started</h2>
+      <div class="section-content">
+        <p>Join the Taxare community and start working on claims that match your skills and interests.</p>
+        <div class="login-buttons">
+          <a href="CALoginPage.html" class="btn">Sign in / Sign Up as a CA</a>
+          <a href="UserLoginForm.html" class="btn">Sign in / Sign Up as a User</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Taxare. All rights reserved. | Address: 123 Main St, City, Country</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling effect for anchor links
+    document.addEventListener('DOMContentLoaded', function() {
+      const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+
+      for (let link of smoothScrollLinks) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

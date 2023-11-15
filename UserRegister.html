@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxare - Connecting Tax Claimers with Charted Accountants</title>
+  <style>
+  /* Global Styles */
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  body {
+    background-color: #cec8ef; /* Set background color to #cec8ef */
+    background-image: url("https://i.pinimg.com/736x/9e/01/eb/9e01eb5466ed5b90dcea3c2f2f84fe38.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Header Styles */
+  header {
+    background-color: #cec8ef; /* Set background color to #cec8ef */
+    color: #fff;
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #dda0dd; /* Set color to #dda0dd */
+    text-decoration: none;
+  }
+
+  .navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .navigation li {
+    margin-right: 20px;
+  }
+
+  .navigation li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Banner Styles */
+  .banner {
+    background-color: #dda0dd; /* Set background color to #dda0dd */
+    padding: 60px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #cec8ef; /* Set color to #cec8ef */
+  }
+
+  .banner p {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  /* Main Content Styles */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .section-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #cec8ef; /* Set color to #cec8ef */
+  }
+
+  .section-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .section-content ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+
+  .login-buttons {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dda0dd; /* Set background color to #dda0dd */
+    color: #cec8ef; /* Set color to #cec8ef */
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #dda0dd; /* Set background color to #dda0dd */
+  }
+
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer p {
+    margin: 0;
+    color: black;
+  }
+</style>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo" style="color: #dda0dd;">Taxare</div> <!-- Set color to #dda0dd -->
+      <ul class="navigation">
+        <li><a href="MainPage.html">Home</a></li>
+        <li><a href="MainPage.html">Services</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <h1 style="color: #cec8ef;">Taxare</h1> <!-- Set color to #cec8ef -->
+    <p>Connecting Tax Claimers with Chartered Accountants</p>
+  </div>
+
+  <main>
+
+    <section class="panel">
+      <div class="container">
+        <h2 class="section-heading">User Registration Form</h2> <!-- Set color to #cec8ef -->
+        <form id="registrationForm" action="submit_registration.php" method="POST">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required><br><br>
+
+          <label for="middleName">Middle Name:</label>
+          <input type="text" id="middleName" name="middleName"><br><br>
+
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required><br><br>
+
+          <label for="email">Email ID:</label>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+
+          <label for="taxCategory">Tax Category:</label>
+          <select id="taxCategory" name="taxCategory" required>
+            <option value="category1">Category 1</option>
+            <option value="category2">Category 2</option>
+            <option value="category3">Category 3</option>
+          </select><br><br>
+
+          <label for="bidPrice">Bid Price:</label>
+          <input type="number" id="bidPrice" name="bidPrice" required><br><br>
+
+          <input type="button" value="Submit" onclick="submitForm()" class="btn"> <!-- Add class "btn" -->
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Taxare. All rights reserved. | Address: 123 Main St, City, Country</p>
+    </div>
+  </footer>
+
+  <script>
+    function submitForm() {
+      var firstName = document.getElementById("firstName").value;
+      var middleName = document.getElementById("middleName").value;
+      var lastName = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+      var phoneNumber = document.getElementById("phoneNumber").value;
+      var taxCategory = document.getElementById("taxCategory").value;
+      var bidPrice = document.getElementById("bidPrice").value;
+
+      var confirmation = confirm("Please confirm the details:\n\n" +
+        "First Name: " + firstName + "\n" +
+        "Middle Name: " + middleName + "\n" +
+        "Last Name: " + lastName + "\n" +
+        "Email: " + email + "\n" +
+        "Phone Number: " + phoneNumber + "\n" +
+        "Tax Category: " + taxCategory + "\n" +
+        "Bid Price: " + bidPrice);
+
+      if (confirmation) {
+        // Store form values in sessionStorage for confirmation page
+        sessionStorage.setItem("firstName", firstName);
+        sessionStorage.setItem("middleName", middleName);
+        sessionStorage.setItem("lastName", lastName);
+        sessionStorage.setItem("email", email);
+        sessionStorage.setItem("phoneNumber", phoneNumber);
+        sessionStorage.setItem("taxCategory", taxCategory);
+        sessionStorage.setItem("bidPrice", bidPrice);
+
+        // Redirect to confirmation page
+        location.href = "confirmation.html";
+      } else {
+        // Stay on the registration form
+      }
+    }
+  </script>
+</body>
+
+</html>

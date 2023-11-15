@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxare - User Login Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+	html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333; /* Set font color to #333 */
+}
+
+body {
+  background-image: url("https://i.pinimg.com/736x/9e/01/eb/9e01eb5466ed5b90dcea3c2f2f84fe38.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.services h2 {
+  color: #333; /* Set "Our Services" heading font color to #333 */
+}
+
+h1, h2 {
+  color: #333; /* Set heading font color to #333 */
+}
+
+/* Header Styles */
+header {
+  background-color: #4d3066; /* Set background color to #4d3066 (Plum) */
+  color: #fff; /* Set font color to white */
+}
+
+/* Banner Styles */
+.banner {
+  background-color: #7c4d85; /* Set background color to #7c4d85 (Plum) */
+  padding: 60px;
+  text-align: center;
+  color: #fff; /* Set font color to white */
+}
+
+.banner h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Main Content Styles */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* Set background color to white */
+  color: #333; /* Set font color to #333 */
+}
+
+.about h2,
+.services h2,
+.login h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #4d3066; /* Set heading font color to #4d3066 (Plum) */
+}
+
+.about p,
+.services ul,
+.login p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.services ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.login-buttons {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4d3066; /* Set background color to #4d3066 (Plum) */
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #7c4d85; /* Set background color to #7c4d85 (Plum) */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #4d3066; /* Set background color to #4d3066 (Plum) */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#login-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+#login-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#login-form input[type="submit"] {
+  background-color: #4d3066; /* Set background color to #4d3066 (Plum) */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#login-form a {
+  margin-top: 10px;
+  display: block;
+}
+
+footer p {
+  margin: 0;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Taxare</div>
+      <ul class="navigation">
+        <li><a href="MainPage.html">Home</a></li>
+        <li><a href="MainPage.html">Services</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="login-form">
+    <h2>Login</h2>
+    <form onsubmit="return authenticateUser(event)">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <input type="submit" value="Login">
+      </div>
+    </form>
+    <a href="password-reset.html">Forgot Password?</a>
+    <a href="UserRegister.html">Register</a>
+  </div>
+
+  <script>
+    function authenticateUser(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Perform SQL query to authenticate the user
+      // Replace the code below with your server-side code that interacts with your database
+
+      // Example code using JavaScript's fetch() to send a request to the server
+      fetch("/authenticate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            // User is authenticated, redirect to main page
+            window.location.href = "MainPage.html";
+          } else {
+            // Authentication failed, display error message
+            alert("Invalid username or password");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
+  </script>
+</body>
+</html>

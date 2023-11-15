@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxare - User Details</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Global Styles */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    body {
+      background-color: #f6e7f7; /* Pearly purple */
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #4d3066; /* Plum */
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000; /* Black */
+      text-decoration: none;
+    }
+
+    .navigation {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navigation li {
+      margin-right: 20px;
+    }
+
+    .navigation li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Banner Styles */
+    .banner {
+      background-color: #7c4d85; /* Plum */
+      padding: 60px;
+      text-align: center;
+      color: #000; /* Black */
+    }
+
+    .banner h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #4d3066; /* Plum */
+    }
+
+    .banner p {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    /* Main Content Styles */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-heading {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #4d3066; /* Plum */
+    }
+
+    .section-content p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .section-content ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .login-buttons {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4d3066; /* Plum */
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #7c4d85; /* Plum */
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #4d3066; /* Plum */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      color: black;
+    }
+
+    /* User Table Styles */
+    .user-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .user-table th,
+    .user-table td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .user-table th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#" class="logo">Taxare</a>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Messages</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="container">
+        <h1>Work with the largest network of independent professionals</h1>
+        <p>Find talent for any Taxation or join the community as a CA</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="section-heading">User Details</h2>
+      <div class="section-content">
+        <!-- The user details grid, pulled from the database using JavaScript -->
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Tax Category</th>
+              <th>Bid Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>Category A</td>
+              <td>$500</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Category B</td>
+              <td>$750</td>
+            </tr>
+            <!-- Add more rows for additional user details -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Taxare. All rights reserved. | Address: 123 Main St, City, Country</p>
+    </div>
+  </footer>
+  <script>
+    // JavaScript code to fetch user details from the database and populate the user details grid
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mocked user data (replace with your actual database fetching logic)
+      const userData = [
+        { name: 'John Doe', taxCategory: 'Category A', bidValue: '$500' },
+        { name: 'Jane Smith', taxCategory: 'Category B', bidValue: '$750' },
+        // Add more user data objects as needed
+      ];
+
+      // Function to generate the HTML for user details rows
+      function generateUserDetailsRows(userData) {
+        return userData.map(function(user) {
+          return `
+            <tr>
+              <td>${user.name}</td>
+              <td>${user.taxCategory}</td>
+              <td>${user.bidValue}</td>
+            </tr>
+          `;
+        }).join('');
+      }
+
+      // Function to populate the user details grid
+      function populateUserDetailsGrid() {
+        const userDetailsTableBody = document.getElementById('user-details-table-body');
+        if (userDetailsTableBody) {
+          userDetailsTableBody.innerHTML = generateUserDetailsRows(userData);
+        }
+      }
+
+      // Call the function to populate the user details grid
+      populateUserDetailsGrid();
+    });
+  </script>
+
+</head>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CA Details</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6e7f7; /* Pastel Magenta */
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #14a800;
+      text-decoration: none;
+    }
+
+    .navigation {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navigation li {
+      margin-right: 20px;
+    }
+
+    .navigation li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .banner {
+      background-color: #FFDAB9; /* Pale orange */
+      padding: 60px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .banner h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: orange;
+    }
+
+    .banner p {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    .ca-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .tile {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .tile h2 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .tile p {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    .tile .email {
+      color: #007bff;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#" class="logo">Taxare</a>
+      <ul class="navigation">
+        <li><a href="MainPage.html">Home</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Messages</a></li>
+        <li><a href="MainPage.html">Services</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="ca-grid" id="caTiles"></div>
+
+  <footer>
+    <p>&copy; 2023 Taxare. All rights reserved. | Address: 123 Main St, City, Country</p>
+  </footer>
+
+  <script>
+    // JavaScript Code
+    // Simulated CA data from the database
+    const caData = [
+      { name: "John Doe", specialization: "Taxation", email: "john.doe@example.com" },
+      { name: "Jane Smith", specialization: "Accounting", email: "jane.smith@example.com" },
+      { name: "David Johnson", specialization: "Auditing", email: "david.johnson@example.com" }
+      // Add more CA data as needed
+    ];
+
+    // Function to create a tile for each CA in the data
+    function createCATiles() {
+      const caTilesContainer = document.getElementById("caTiles");
+
+      caData.forEach(ca => {
+        const tile = document.createElement("div");
+        tile.classList.add("tile");
+
+        const nameElement = document.createElement("h2");
+        nameElement.textContent = ca.name;
+
+        const specializationElement = document.createElement("p");
+        specializationElement.textContent = `Specialization: ${ca.specialization}`;
+
+        const emailElement = document.createElement("p");
+        emailElement.classList.add("email");
+        emailElement.textContent = `Email: ${ca.email}`;
+
+        tile.appendChild(nameElement);
+        tile.appendChild(specializationElement);
+        tile.appendChild(emailElement);
+
+        caTilesContainer.appendChild(tile);
+      });
+    }
+
+    // Call the function to create the CA tiles
+    createCATiles();
+  </script>
+  <script>
+    // JavaScript Code
+    // Function to create a tile for each CA in the data
+    function createCATiles(caData) {
+      const caTilesContainer = document.getElementById("caTiles");
+
+      caData.forEach(ca => {
+        const tile = document.createElement("div");
+        tile.classList.add("tile");
+
+        const nameElement = document.createElement("h2");
+        nameElement.textContent = ca.name;
+
+        const specializationElement = document.createElement("p");
+        specializationElement.textContent = `Specialization: ${ca.specialization}`;
+
+        const emailElement = document.createElement("p");
+        emailElement.classList.add("email");
+        emailElement.textContent = `Email: ${ca.email}`;
+
+        tile.appendChild(nameElement);
+        tile.appendChild(specializationElement);
+        tile.appendChild(emailElement);
+
+        caTilesContainer.appendChild(tile);
+      });
+    }
+
+    // Fetch data from the mock API endpoint
+    fetch("https://example.com/api/cas")
+      .then(response => response.json())
+      .then(data => {
+        // Call the function to create the CA tiles
+        createCATiles(data);
+      })
+      .catch(error => {
+        console.error("Error fetching CA data:", error);
+      });
+  </script>
+</body>
+
+</html>

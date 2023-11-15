@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxare - Connecting Tax Claimers with Charted Accountants</title>
+  <style>
+    /* Global Styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #4d3066;
+    }
+
+    body {
+      background-color: #cec8ef; /* Pale yellow */
+    }
+
+    h1, h2 {
+      color: #000; /* Heading font color set to black */
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #4d3066;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navigation {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navigation li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .navigation li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .banner {
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 40px 0;
+      margin-bottom: 20px;
+    }
+
+    .banner h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 18px;
+      margin-bottom: 0;
+	  color: #000;
+    }
+    /* Main Content Styles */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .about h2,
+    .services h2,
+    .login h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about p,
+    .services ul,
+    .login p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .services ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .login-buttons {
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4d3066;
+      color: #4d3066;
+      text-decoration: none;
+      margin-right: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #4d3066;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+    .panel {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .panel h2 {
+      text-align: center;
+    }
+
+    .panel label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .panel input[type="text"],
+    .panel input[type="date"],
+    .panel input[type="email"],
+    .panel input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .panel input[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Taxare</div>
+      <ul class="navigation">
+        <li><a href="MainPage.html">Home</a></li>
+        <li><a href="MainPage.html">Services</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="panel">
+    <h2>Taxare Company CA Registration</h2>
+
+    <form id="userRegistrationForm">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="middleName">Middle Name:</label>
+      <input type="text" id="middleName" name="middleName">
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="qualification">Educational Qualification:</label>
+      <input type="text" id="qualification" name="qualification" required>
+
+      <label for="caCertYear">CA Certification Year:</label>
+      <input type="number" id="caCertYear" name="caCertYear" required>
+
+      <label for="experience">Years of Experience:</label>
+      <input type="number" id="experience" name="experience" required>
+
+      <label for="aadharNumber">Aadhar Number:</label>
+      <input type="text" id="aadharNumber" name="aadharNumber" required>
+
+      <label for="mobileNumber">Mobile Number:</label>
+      <input type="text" id="mobileNumber" name="mobileNumber" required>
+
+      <fieldset>
+        <legend>Experience</legend>
+
+        <div>
+          <label for="company1">Company 1:</label>
+          <input type="text" id="company1" name="company1" required>
+
+          <label for="dates1">Dates Worked:</label>
+          <input type="date" id="dates1" name="dates1" required>
+        </div>
+
+        <div>
+          <label for="company2">Company 2:</label>
+          <input type="text" id="company2" name="company2">
+
+          <label for="dates2">Dates Worked:</label>
+          <input type="date" id="dates2" name="dates2">
+        </div>
+
+        <div>
+          <label for="company3">Company 3:</label>
+          <input type="text" id="company3" name="company3">
+
+          <label for="dates3">Dates Worked:</label>
+          <input type="date" id="dates3" name="dates3">
+        </div>
+      </fieldset>
+
+      <label for="aboutYourself">Tell us about yourself:</label>
+      <textarea id="aboutYourself" name="aboutYourself" rows="4" cols="50" required></textarea>
+
+      <label for="aadharDocument">Aadhar Document (Upload):</label>
+      <input type="file" id="aadharDocument" name="aadharDocument" accept="image/*" required>
+
+      <label for="caCertificate">CA Certificate (Upload):</label>
+      <input type="file" id="caCertificate" name="caCertificate" accept=".pdf" required>
+
+      <label for="panDetails">PAN Details:</label>
+      <input type="text" id="panDetails" name="panDetails" required>
+
+      <label for="passportDocument">Passport Document (Upload):</label>
+      <input type="file" id="passportDocument" name="passportDocument" accept="image/*">
+
+      <input type="submit" value="Register">
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("userRegistrationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Get form values
+      var firstName = document.getElementById("firstName").value;
+      var middleName = document.getElementById("middleName").value;
+      var lastName = document.getElementById("lastName").value;
+      var dob = document.getElementById("dob").value;
+      var email = document.getElementById("email").value;
+      var qualification = document.getElementById("qualification").value;
+      var caCertYear = document.getElementById("caCertYear").value;
+      var experience = document.getElementById("experience").value;
+      var aadharNumber = document.getElementById("aadharNumber").value;
+      var mobileNumber = document.getElementById("mobileNumber").value;
+      var company1 = document.getElementById("company1").value;
+      var dates1 = document.getElementById("dates1").value;
+      var company2 = document.getElementById("company2").value;
+      var dates2 = document.getElementById("dates2").value;
+      var company3 = document.getElementById("company3").value;
+      var dates3 = document.getElementById("dates3").value;
+      var aboutYourself = document.getElementById("aboutYourself").value;
+      var aadharDocument = document.getElementById("aadharDocument").value;
+      var caCertificate = document.getElementById("caCertificate").value;
+      var panDetails = document.getElementById("panDetails").value;
+      var passportDocument = document.getElementById("passportDocument").value;
+
+      // Store form values in sessionStorage for verification page
+      sessionStorage.setItem("firstName", firstName);
+      sessionStorage.setItem("middleName", middleName);
+      sessionStorage.setItem("lastName", lastName);
+      sessionStorage.setItem("dob", dob);
+      sessionStorage.setItem("email", email);
+      sessionStorage.setItem("qualification", qualification);
+      sessionStorage.setItem("caCertYear", caCertYear);
+      sessionStorage.setItem("experience", experience);
+      sessionStorage.setItem("aadharNumber", aadharNumber);
+      sessionStorage.setItem("mobileNumber", mobileNumber);
+      sessionStorage.setItem("company1", company1);
+      sessionStorage.setItem("dates1", dates1);
+      sessionStorage.setItem("company2", company2);
+      sessionStorage.setItem("dates2", dates2);
+      sessionStorage.setItem("company3", company3);
+      sessionStorage.setItem("dates3", dates3);
+      sessionStorage.setItem("aboutYourself", aboutYourself);
+      sessionStorage.setItem("aadharDocument", aadharDocument);
+      sessionStorage.setItem("caCertificate", caCertificate);
+      sessionStorage.setItem("panDetails", panDetails);
+      sessionStorage.setItem("passportDocument", passportDocument);
+
+      // Redirect to verification page
+      location.href = "verification.html";
+    });
+  </script>
+</body>
+</html>
